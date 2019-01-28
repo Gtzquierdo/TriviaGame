@@ -4,7 +4,7 @@ $(document).ready(function() {
     //Game variables:
     //keep track of quesitons
     var questionCounter = 0;
-    //timer starts at 20 seconds for each question
+    //timer starts at 15 seconds for each question
     var time = 15;
     //score for correct guesses
     var correctGuesses = 0;
