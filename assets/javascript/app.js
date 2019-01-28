@@ -42,50 +42,50 @@ $(document).ready(function() {
             ];
 
             //fill in questions based on the question count
-            function questionContent() {
+    function questionContent() {
             
-            $("#gameScreen").append("<p><strong>" +
-                questions[questionCounter].question + "</p><p class= 'choices'>" +
-                questions[questionCounter].choices[0] + "</p><p class='choices'>" + 
-    		    questions[questionCounter].choices[1] + "</p><p class='choices'>" + 
-    		    questions[questionCounter].choices[2] + "</p><p class='choices'>" + 
-    		    questions[questionCounter].choices[3] + "</strong></p>");
+        $("#gameScreen").append("<p><strong>" +
+            questions[questionCounter].question + "</p><p class= 'choices'>" +
+            questions[questionCounter].choices[0] + "</p><p class='choices'>" + 
+            questions[questionCounter].choices[1] + "</p><p class='choices'>" + 
+            questions[questionCounter].choices[2] + "</p><p class='choices'>" + 
+            questions[questionCounter].choices[3] + "</strong></p>");
             
-            }
+        };
             // user guessed correctl
-            function userWin() {
-                $("#gameScreen").html("<p>You're correct!</p>");
-                correctGuesses++;
-                var correctAnswer = questions[questionCounter].correctAnswer;
-                $("#gameScreen").append("<p>The answer is <span class='answer'>" + correctAnswer + "</span></p>" + 
-                questions[questionCounter].image);
-                setTimeout(nextQuestion, 4000);
-                questionCounter++;
-            }
+    function userWin() {
+        $("#gameScreen").html("<p>You're correct!</p>");
+        correctGuesses++;
+        var correctAnswer = questions[questionCounter].correctAnswer;
+        $("#gameScreen").append("<p>The answer is <span class='answer'>" + correctAnswer + "</span></p>" + 
+        questions[questionCounter].image);
+        setTimeout(nextQuestion, 4000);
+        questionCounter++;
+        };
 
-            // user guessed incorrectly
-	        function userLoss() {
-		        $("#gameScreen").html("<p>Incorrect!</p>");
-		        incorrectGuesses++;
-		        var correctAnswer = questions[questionCounter].correctAnswer;
-		        $("#gameScreen").append("<p>The correct answer is <span class='answer'>" + correctAnswer + "</span></p>" + 
-			    questions[questionCounter].image);
-		        setTimeout(nextQuestion, 4000);
-		        questionCounter++;
-	        }
+    // user guessed incorrectly
+    function userLoss() {
+        $("#gameScreen").html("<p>Incorrect!</p>");
+        incorrectGuesses++;
+        var correctAnswer = questions[questionCounter].correctAnswer;
+        $("#gameScreen").append("<p>The correct answer is <span class='answer'>" + correctAnswer + "</span></p>" + 
+        questions[questionCounter].image);
+        setTimeout(nextQuestion, 4000);
+        questionCounter++;
+    };
 
-            // user ran out of time
-	        function userTimeout() {
-		        if (time === 0) {
-			    $("#gameScreen").html("<p>You ran out of time!</p>");
-			    incorrectGuesses++;
-			    var correctAnswer = questions[questionCounter].correctAnswer;
-			    $("#gameScreen").append("<p>The answer was <span class='answer'>" + correctAnswer + "</span></p>" + 
-				questions[questionCounter].image);
-			    setTimeout(nextQuestion, 4000);
-			    questionCounter++;
-		        }   
-            }
+    // user ran out of time
+    function userTimeout() {
+        if (time === 0) {
+        $("#gameScreen").html("<p>You ran out of time!</p>");
+        incorrectGuesses++;
+        var correctAnswer = questions[questionCounter].correctAnswer;
+        $("#gameScreen").append("<p>The answer was <span class='answer'>" + correctAnswer + "</span></p>" + 
+        questions[questionCounter].image);
+        setTimeout(nextQuestion, 4000);
+        questionCounter++;
+        }   
+    };
 
     // screen that shows final score and message
 	function resultsScreen() {
@@ -106,7 +106,7 @@ $(document).ready(function() {
 		$("#bottomText").html(bottomText);
 		gameReset();
 		$("#start").click(nextQuestion);
-	}
+	};
 
 	// game clock currently set to 15 seconds
 	function timer() {
@@ -121,7 +121,7 @@ $(document).ready(function() {
 			}
 			$("#timer").html("<strong>" + time + "</strong>");
 		}
-	}
+	};
 
 	// moves question counter forward to show next question
 	function nextQuestion() {
@@ -137,14 +137,14 @@ $(document).ready(function() {
 		}
 	// console.log(questionCounter);
 	// console.log(questions[questionCounter].correctAnswer);
-	}
+	};
 
 	// reset score and counter on restart
 	function gameReset() {
 		questionCounter = 0;
 		correctGuesses = 0;
 		incorrectGuesses = 0;
-	}
+	};
 
     function startGame() {
     	$("#gameScreen").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
@@ -158,7 +158,7 @@ $(document).ready(function() {
 		questionContent();
     	timer();
     	userTimeout();
-    }
+    };
 
     // this starts the game
     $("#start").click(nextQuestion);
