@@ -1,0 +1,47 @@
+body { 
+	background: url(../images/nuggets.jpg) no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'Times New Roman', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Times New Roman', sans-serif;
+  color: black;
+	padding: 25px;
+}
+
+.answer,
+#timer {
+	font-weight: 900;
+}
+
+#start {
+	color: black;
+}
+
+.choices {
+	text-align: center;
+	border: groove 2px black;
+	border-radius: 5%;
+	margin: 0 35%;
+}
+
+.choices:hover {
+	background-color: rgb(130, 177, 204);
+	color: white;
+}
+
+#gameScreen {
+	box-shadow: 7px 5px 47px 0px rgba(255, 254, 251, 0.904);
+}
+
+.shadow {
+	box-shadow: -7px 6px 5px -1px rgba(255, 254, 251, 0.904);
+}
+
+.picture {
+	width: 70%;
+	height: 70%;
+}
