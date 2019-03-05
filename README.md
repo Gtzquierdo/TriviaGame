@@ -4,6 +4,7 @@ A fun basic 4 question Trivia Game. The theme is based around my favorite NBA te
 
 **No User-Input Needed**
 **30 Seconds to Answer**
+
 Simple Instructions:
 
 1. One question will appear and it'll stay on the screen until the player answers it or the time runs out. 
