@@ -3,6 +3,7 @@
 A fun basic 4 question Trivia Game. The theme is based around my favorite NBA team and Colorado sports team....**The Denver Nuggets**
 
 **No User-Input Needed**
+
 **30 Seconds to Answer**
 
 Simple Instructions:
